@@ -1,0 +1,29 @@
+nb-card {
+    height: 100% !important;
+    display: flex;
+    flex-direction: row;
+}
+
+nb-actions {
+    height: 100%;
+}
+
+nb-action > a {
+    display: contents;
+}
+
+#leftHeaderMenu {
+    flex: auto;
+}
+
+#title {
+    font-size: 0.9rem;
+}
+
+#leftHeaderMenu :first-child {
+    padding: 0 1rem;
+}
+
+#rightHeaderMenu span {
+    margin-left: 0.5em;
+}

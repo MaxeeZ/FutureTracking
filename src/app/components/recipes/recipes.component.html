@@ -1,0 +1,17 @@
+<nb-card>
+    <nb-card-body>
+
+        <nb-tabset fullWidth>
+            <nb-tab tabTitle="Starter">
+                <app-recipe-details *ngFor="let recipe of startRecipes" [recipe]="recipe"></app-recipe-details>
+            </nb-tab>
+            <nb-tab tabTitle="Main course">
+                <app-recipe-details *ngFor="let recipe of mainRecipes" [recipe]="recipe"></app-recipe-details>
+            </nb-tab>
+            <nb-tab tabTitle="Dessert">
+                <app-recipe-details *ngFor="let recipe of dessertRecipes" [recipe]="recipe"></app-recipe-details>
+            </nb-tab>
+        </nb-tabset>
+
+    </nb-card-body>
+</nb-card>

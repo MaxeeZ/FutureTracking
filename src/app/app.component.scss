@@ -1,0 +1,22 @@
+app-menu-header {
+    height: 100%;
+    width: 100%
+}
+
+nb-sidebar {
+    z-index: 1;
+}
+
+nb-layout-footer {
+    box-shadow: 0 0.5rem 2rem 1rem rgba(44, 51, 73, 0.1);
+    height: 8%;
+}
+
+app-footer {
+    display: flex;
+    align-items: center;
+}
+
+html, body {
+    overflow: hidden;
+}

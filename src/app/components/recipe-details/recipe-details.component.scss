@@ -1,0 +1,44 @@
+img {
+  height: 10rem;
+  width: 12rem;
+  margin-right: 4%;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0 !important;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+
+  :not(:last-child) {
+    flex: 1;
+  }
+}
+
+.detail > * {
+  margin-bottom: 0 !important;
+}
+
+.bodyDescription {
+  max-height: 14rem;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+nb-card :not(:last-child) {
+  margin-bottom: 3%;
+}
+
+nb-card-footer button {
+  margin-bottom: 0 !important;
+}
+
+nb-card-footer :last-child {
+    float: right !important;
+}

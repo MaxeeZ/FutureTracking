@@ -1,0 +1,21 @@
+<nb-card>
+
+    <nb-actions id="leftHeaderMenu">
+        <nb-action icon="menu-2-outline" (click)='toggleSideBar()'></nb-action>
+        <nb-action id="title">FUTURE TRACKING</nb-action>
+    </nb-actions>
+
+    <nb-actions id="rightHeaderMenu">
+        <nb-action icon="search-outline" (click)="search()"><nb-search type='rotate-layout'></nb-search></nb-action>
+        <nb-action>
+            <a>
+                <nb-icon icon="email-outline"></nb-icon>
+                <span>CONTACT@FUTURE-TRACKING.COM</span>
+            </a>
+        </nb-action>
+        <nb-action>
+            <nb-user name="Maxime KELLNER" [showTitle]="false" picture="https://media.licdn.com/dms/image/C5603AQHFbpSRKKR3rA/profile-displayphoto-shrink_200_200/0?e=1582761600&v=beta&t=f1IEVbT_NIh4vdAPwS-NIAmoqkAV2SwlqaOTrmUK71o"></nb-user>
+        </nb-action>
+    </nb-actions>
+
+</nb-card>

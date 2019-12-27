@@ -1,0 +1,29 @@
+<nb-card status="danger">
+    <nb-card-header>{{ recipe.name }}</nb-card-header>
+    <nb-card-body class="bodyDescription">
+        <div class="body">
+            <img src={{recipe.url}}>
+            <div class="ingredients">
+                <p>Ingredients: </p>
+                <ng-container *ngFor="let ingredient of recipe.ingredients">
+                    {{ ingredient }},
+                </ng-container>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="time">
+                <nb-icon icon="clock-outline"></nb-icon>
+                <span>{{ recipe.duration }} min</span>
+            </div>
+            <span>Level: {{ recipe.level }}</span>
+            <div class="person">
+                <nb-icon icon="person-outline"></nb-icon>
+                <span>{{ recipe.personne }}</span>
+            </div>
+        </div>
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton status="success" (click)="cook()">Cook</button>
+        <button nbButton status="danger" (click)="exportPDF()">PDF</button>
+    </nb-card-footer>
+</nb-card>

@@ -1,0 +1,41 @@
+nb-card {
+  height: 100%;
+  margin: 0;
+
+  nb-tab {
+    max-height: 95%;
+  }
+
+}
+
+nb-tabset {
+  height: 100%;
+}
+
+nb-tab {
+  height: 100%;
+}
+
+nb-tab nb-card-body {
+  overflow: hidden;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+nb-card-footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+#loading {
+    text-align: center;
+}

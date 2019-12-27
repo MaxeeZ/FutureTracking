@@ -1,1 +1,60 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@import '~@nebular/theme/styles/themes/default';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
 /* You can add global styles to this file, and also import other style files */
+.scrollable {
+  padding: 0 0 0 0 !important;
+}
+
+nb-layout-header nav {
+  padding: 0 !important;
+}
+
+nb-layout .layout .layout-container .content .columns nb-layout-column {
+  padding: 0 !important;
+}
+
+nb-layout-footer nav {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+nb-tabset .tab-link {
+  outline: 0 !important;
+}
+
+app-error-found {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+nb-select.size-medium .select-button, .nb-theme-default .size-medium nb-option {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+nb-select .select-button {
+  min-width: 9rem;
+  cursor: pointer;
+}
+
+.layout-container {
+  max-height: 1rem !important;
+}
+
+.columns {
+  height: 100%;
+}
+
+html {
+  overflow: hidden;
+}

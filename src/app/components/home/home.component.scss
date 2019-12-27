@@ -1,0 +1,35 @@
+nb-card {
+  height: 100%;
+}
+
+#homeTitle {
+  margin: 0 auto;
+}
+
+#homeDescribe {
+    margin: auto;
+    text-align: center;
+}
+
+#homeToRecipes {
+    
+}
+
+#homeTitle span {
+  font-size: 3rem;
+}
+
+#homeDescribe span p {
+    font-size: 3rem;
+    line-height: normal;
+}
+
+img {
+  height: 7rem;
+}
+
+nb-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,39 @@
+<nb-card>
+    <nb-card-body>
+
+        <nb-tabset fullWidth (changeTab)="toggleLoadingAnimation($event)">
+            <nb-tab tabTitle="Informations">
+                <app-error-found *ngIf="!loading"></app-error-found>
+                <div *ngIf="loading">
+                    <nb-card>
+                        <nb-card-header id="loading" [nbSpinner]="loading" nbSpinnerStatus="success" nbSpinnerSize="giant">Loading</nb-card-header>
+                    </nb-card>
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Site">
+                <nb-card>
+                    <nb-card-header>
+                        Google Maps
+                    </nb-card-header>
+                    <nb-card-body>
+                        <div #mapContainer id="map"></div>
+                    </nb-card-body>
+                </nb-card>
+            </nb-tab>
+            <nb-tab tabTitle="Questions">
+                <nb-card>
+                    <nb-card-header>
+                        Questions ?
+                    </nb-card-header>
+                    <nb-card-body>
+                        <textarea nbInput fullWidth placeholder="I listen you ..." [(ngModel)]="ask"></textarea>
+                    </nb-card-body>
+                    <nb-card-footer>
+                        <button nbButton status="success" (click)="confirmAsk('top-right', 'info')">Submit</button>
+                    </nb-card-footer>
+                </nb-card>
+            </nb-tab>
+        </nb-tabset>
+
+    </nb-card-body>
+</nb-card>
