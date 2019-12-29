@@ -32,7 +32,7 @@ pipeline {
                     ng build --prod
 
                     cd dist
-                    zip -r ${artefact_name}.zip nebular-app'''
+                    zip -r ${artefact_name}.zip NebularApp'''
             } 
         }
 
