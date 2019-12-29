@@ -1,0 +1,47 @@
+pipeline {
+
+    agent {
+        label 'master'
+    }
+
+    triggers {
+            pollSCM('H/5 * * * *')
+    }
+
+    parameters {
+            string(defaultValue: 'app', description: 'Choose the name of reposity where going to be store artefact file', name: 'artefact_name', trim: false)
+    }
+
+    options {
+        disableConcurrentBuilds() 
+        buildDiscarder(logRotator(numToKeepStr: '30', daysToKeepStr: '90')) 
+    }
+
+    stages {
+
+        stage('Clean and checkout project') { 
+            steps{ 
+                deleteDir() 
+                checkout(changelog: false, scm: scm) 
+            }
+        } 
+    
+        stage('Build') { 
+            steps{ 
+                sh '''npm install
+                    ng build --prod
+
+                    cd dist
+                    zip -r ${artefact_name}.zip client'''
+            } 
+        }
+
+        stage('Post-Build') { 
+            steps {
+                sh 'sonar-scanner'
+            }
+        }
+        
+    }
+
+}
