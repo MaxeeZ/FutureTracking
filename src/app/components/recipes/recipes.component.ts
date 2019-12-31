@@ -26,11 +26,12 @@ export class RecipesComponent implements OnInit {
 
   initRecipesLists() {
 
-    this.http.get('assets/recipes/recipes.json').subscribe((data: any) => {
+    this.http.get('http://localhost:8181/getRecipes').subscribe((data: any) => {
       console.log(data);
-      this.startRecipes = data.starter;
-      this.mainRecipes = data.main;
-      this.dessertRecipes = data.dessert;
+      this.startRecipes = data.filter(x => x.category == 0);
+      console.log(this.startRecipes);
+      this.mainRecipes = data.filter(x => x.category == 1);;
+      this.dessertRecipes = data.filter(x => x.category == 2);;
     });
 
   }

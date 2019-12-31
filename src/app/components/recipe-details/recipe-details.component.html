@@ -4,10 +4,7 @@
         <div class="body">
             <img src={{recipe.url}}>
             <div class="ingredients">
-                <p>Ingredients: </p>
-                <ng-container *ngFor="let ingredient of recipe.ingredients">
-                    {{ ingredient }},
-                </ng-container>
+                <p>Ingredients: {{ recipe.ingredients }}</p>
             </div>
         </div>
         <div class="detail">
@@ -18,7 +15,7 @@
             <span>Level: {{ recipe.level }}</span>
             <div class="person">
                 <nb-icon icon="person-outline"></nb-icon>
-                <span>{{ recipe.personne }}</span>
+                <span>{{ recipe.person }}</span>
             </div>
         </div>
     </nb-card-body>

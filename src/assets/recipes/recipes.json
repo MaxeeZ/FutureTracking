@@ -1,105 +1,105 @@
-{
-    "starter": [
-        {
-            "name": "Jeanne's timpani",
-            "ingredients": [
-                "4 slices of smokeds salmon",
-                "2 zucchini",
-                "3 eggs",
-                "10 cl thick fresh cream",
-                "1 small garlic clove",
-                "1 tablespoon olive oil",
-                "dill",
-                "mint",
-                "salt",
-                "pepper"
-            ],
-            "duration": 18,
-            "personne": 4,
-            "level": 1,
-            "url": "https://assets.afcdn.com/recipe/20140921/15292_w800h600c1cx1224cy1224.jpg"
-        },
-        {
-            "name": "Carpaccio of scallops with lemon caviar with lemon caviar",
-            "ingredients": [
-                "12 large scallops",
-                "3 lemongrass sticks",
-                "5 cl olive oil",
-                "1 lemon caviar",
-                "2 chervil branches"
-            ],
-            "duration": 20,
-            "personne": 4,
-            "level": 1,
-            "url": "https://resize-elle.ladmedia.fr/r/618,769,force,ffffff/img/var/plain_site/storage/images/imports/repack/elle-a-table/carpaccio-de-saint-jacques-au-citron-caviar-3752811/89660275-2-fre-FR/Carpaccio-de-saint-jacques-au-citron-caviar.jpg"
-        }
-    ],
-    "main": [
-        {
-            "name": "Quiche Lorraine",
-            "ingredients": [
-                "200g shortcrust pastry",
-                "200g bacon",
-                "30g butter",
-                "3 eggs",
-                "20cl of fresh cream",
-                "20cl milk",
-                "nutmeg",
-                "salt",
-                "pepper"
-            ],
-            "duration": 60,
-            "personne": 4,
-            "level": 1,
-            "url": "https://assets.afcdn.com/recipe/20160404/37706_w1024h768c1cx1500cy1000.jpg"
-        },
-        {
-            "name": "Roast beef in the oven",
-            "ingredients": [
-                "400g barded beef roast",
-                "1 garlic clove",
-                "2 tablespoons olive oil",
-                "12cl of water",
-                "1 pepper",
-                "1 salt",
-                "1 thyme"
-            ],
-            "duration": 45,
-            "personne": 2,
-            "level": 1,
-            "url": "https://s3.eu-central-1.amazonaws.com/media.quitoque.fr/recipe_w1536_h1024/recipes/images/roti-de-boeuf-au-thym-pommes-grenaille-et-blette-poelee/roti-de-boeuf-au-thym-pommes-grenaille-et-blette-poelee-2"
-        },
-        {
-            "name": "Potato gratin",
-            "ingredients": [
-                "1kg of potato",
-                "60g grated cheese",
-                "25cl of fresh cream",
-                "30g butter",
-                "1 garlic clove",
-                "pepper",
-                "salt"
-            ],
-            "duration": 70,
-            "personne": 4,
-            "level": 1,
-            "url": "https://assets.afcdn.com/recipe/20180123/77042_w1024h768c1cx2625cy1750cxt0cyt0cxb5250cyb3500.jpg"
-        }
-    ],
-    "dessert": [
-        {
-            "name": "Chocolate fondant",
-            "ingredients": [
-                "200g dark chocolate",
-                "150g butter",
-                "150g granulated suger",
-                "50g flour",
-                "3 eggs"
-            ],
-            "duration": 40,
-            "personne": 4,
-            "level": 1,
-            "url": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/ff85d47f-db2b-44ac-847a-7aaa136d1be8/Derivates/ba0708d6-905f-4c11-92d5-6fd11ab61218.jpg"
-        }
-    ]
-}
+[
+    {
+        "name": "Jeanne's timpani",
+        "category": 0,
+        "ingredients": [
+            "4 slices of smokeds salmon",
+            "2 zucchini",
+            "3 eggs",
+            "10 cl thick fresh cream",
+            "1 small garlic clove",
+            "1 tablespoon olive oil",
+            "dill",
+            "mint",
+            "salt",
+            "pepper"
+        ],
+        "duration": 18,
+        "person": 4,
+        "level": 1,
+        "url": "https://assets.afcdn.com/recipe/20140921/15292_w800h600c1cx1224cy1224.jpg"
+    },
+    {
+        "name": "Carpaccio of scallops with lemon caviar with lemon caviar",
+        "category": 0,
+        "ingredients": [
+            "12 large scallops",
+            "3 lemongrass sticks",
+            "5 cl olive oil",
+            "1 lemon caviar",
+            "2 chervil branches"
+        ],
+        "duration": 20,
+        "person": 4,
+        "level": 1,
+        "url": "https://resize-elle.ladmedia.fr/r/618,769,force,ffffff/img/var/plain_site/storage/images/imports/repack/elle-a-table/carpaccio-de-saint-jacques-au-citron-caviar-3752811/89660275-2-fre-FR/Carpaccio-de-saint-jacques-au-citron-caviar.jpg"
+    },
+    {
+        "name": "Quiche Lorraine",
+        "category": 1,
+        "ingredients": [
+            "200g shortcrust pastry",
+            "200g bacon",
+            "30g butter",
+            "3 eggs",
+            "20cl of fresh cream",
+            "20cl milk",
+            "nutmeg",
+            "salt",
+            "pepper"
+        ],
+        "duration": 60,
+        "person": 4,
+        "level": 1,
+        "url": "https://assets.afcdn.com/recipe/20160404/37706_w1024h768c1cx1500cy1000.jpg"
+    },
+    {
+        "name": "Roast beef in the oven",
+        "category": 1,
+        "ingredients": [
+            "400g barded beef roast",
+            "1 garlic clove",
+            "2 tablespoons olive oil",
+            "12cl of water",
+            "1 pepper",
+            "1 salt",
+            "1 thyme"
+        ],
+        "duration": 45,
+        "person": 2,
+        "level": 1,
+        "url": "https://s3.eu-central-1.amazonaws.com/media.quitoque.fr/recipe_w1536_h1024/recipes/images/roti-de-boeuf-au-thym-pommes-grenaille-et-blette-poelee/roti-de-boeuf-au-thym-pommes-grenaille-et-blette-poelee-2"
+    },
+    {
+        "name": "Potato gratin",
+        "category": 1,
+        "ingredients": [
+            "1kg of potato",
+            "60g grated cheese",
+            "25cl of fresh cream",
+            "30g butter",
+            "1 garlic clove",
+            "pepper",
+            "salt"
+        ],
+        "duration": 70,
+        "person": 4,
+        "level": 1,
+        "url": "https://assets.afcdn.com/recipe/20180123/77042_w1024h768c1cx2625cy1750cxt0cyt0cxb5250cyb3500.jpg"
+    },
+    {
+        "name": "Chocolate fondant",
+        "category": 2,
+        "ingredients": [
+            "200g dark chocolate",
+            "150g butter",
+            "150g granulated suger",
+            "50g flour",
+            "3 eggs"
+        ],
+        "duration": 40,
+        "person": 4,
+        "level": 1,
+        "url": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/ff85d47f-db2b-44ac-847a-7aaa136d1be8/Derivates/ba0708d6-905f-4c11-92d5-6fd11ab61218.jpg"
+    }
+]
