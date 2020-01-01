@@ -5,26 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NbThemeModule,
-         NbLayoutModule,
-         NbSidebarModule,
-         NbMenuModule,
-         NbSidebarService,
-         NbActionsModule,
-         NbUserModule,
-         NbIconModule,
-         NbTabsetModule,
-         NbSearchModule,
-         NbSearchService,
-        NbToastrService,
-        NbToastrModule,
-        NbCardModule,
-        NbButtonModule,
-        NbSpinnerModule,
-        NbThemeService,
-        NbSelectModule,
-        NbListModule,
-        NbBadgeModule} from '@nebular/theme';
+import {
+  NbThemeModule,
+  NbLayoutModule,
+  NbSidebarModule,
+  NbMenuModule,
+  NbSidebarService,
+  NbActionsModule,
+  NbUserModule,
+  NbIconModule,
+  NbTabsetModule,
+  NbSearchModule,
+  NbSearchService,
+  NbToastrService,
+  NbToastrModule,
+  NbCardModule,
+  NbButtonModule,
+  NbSpinnerModule,
+  NbThemeService,
+  NbSelectModule,
+  NbListModule,
+  NbBadgeModule,
+  NbWindowModule,
+  NbWindowService
+} from '@nebular/theme';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { HomeComponent } from './components/home/home.component';
@@ -38,6 +42,8 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { RecipeDetailsComponent } from './components/recipe-details/recipe-details.component';
+
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -73,13 +79,16 @@ import { RecipeDetailsComponent } from './components/recipe-details/recipe-detai
     NbSelectModule,
     NbListModule,
     NbBadgeModule,
+    NbWindowModule.forRoot(),
+    PdfViewerModule,
     HttpClientModule
   ],
   providers: [
     NbSidebarService,
     NbSearchService,
     NbToastrService,
-    NbThemeService
+    NbThemeService,
+    NbWindowService
   ],
   bootstrap: [AppComponent]
 })

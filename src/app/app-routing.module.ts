@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Recipes', component: RecipesComponent },
   { path: 'Contact', component: ContactComponent },
-  { path: '**', redirectTo: '404' },
+  { path: '', redirectTo: 'Home' , pathMatch: 'full'},
+  { path: '**', redirectTo: '404', pathMatch: 'full'},
   { path: '404', component: ErrorFoundComponent }
 ];
 

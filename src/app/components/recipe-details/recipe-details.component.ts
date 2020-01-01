@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { NbWindowService } from '@nebular/theme';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-details',
@@ -8,8 +11,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RecipeDetailsComponent implements OnInit {
 
   @Input() recipe;
+  @ViewChild('contentTemplate', { static: false }) contentTemplate: TemplateRef<any>;
+  
+  pdfSrc: any;
 
-  constructor() {
+  constructor(private http: HttpClient, private windowService: NbWindowService, private router: Router) {
   }
 
   ngOnInit() {
@@ -20,7 +26,16 @@ export class RecipeDetailsComponent implements OnInit {
     console.log('On voit toutes les étapes de préparation nécessaires pour la recette de ' + this.recipe.name);
   }
 
+  openWindow() {
+
+  }
+
   exportPDF() {
-    console.log('On export la recette en fichier PDF');
+    this.pdfSrc = 'http://localhost:8181/getRecipes/' + this.recipe.id;
+    this.windowService.open(this.contentTemplate);
+  }
+
+  downloadPDF() {
+    this.router.navigateByUrl('localhost:8181/getRecipes/' + this.recipe.id, { skipLocationChange: false });
   }
 }

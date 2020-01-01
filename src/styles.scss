@@ -58,3 +58,19 @@ nb-select .select-button {
 html {
   overflow: hidden;
 }
+
+nb-window nb-card {
+  max-height: 87vh !important;
+  margin: 0 auto !important;
+}
+
+.cdk-global-scrollblock {
+  position: fixed;
+  width: 100%;
+  overflow-y: unset !important;
+}
+
+.pdf-container {
+  display: flex !important;
+  flex-direction: column !important;
+}

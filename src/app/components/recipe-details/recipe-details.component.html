@@ -24,3 +24,10 @@
         <button nbButton status="danger" (click)="exportPDF()">PDF</button>
     </nb-card-footer>
 </nb-card>
+
+<ng-template #contentTemplate let-data>
+    <div class="pdf-container">
+        <button nbButton status="info" (click)="downloadPDF()" icon="outline-download">Download</button>
+        <pdf-viewer [src]="pdfSrc" [original-size]="false"></pdf-viewer>
+    </div>
+</ng-template>
