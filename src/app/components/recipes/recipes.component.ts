@@ -26,7 +26,7 @@ export class RecipesComponent implements OnInit {
 
   initRecipesLists() {
 
-    this.http.get('http://localhost:8181/getRecipes').subscribe((data: any) => {
+    this.http.get('http://192.168.56.101:8181/getRecipes').subscribe((data: any) => {
       console.log(data);
       this.startRecipes = data.filter(x => x.category == 0);
       console.log(this.startRecipes);
