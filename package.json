@@ -1,7 +1,9 @@
 {
-  "name": "nebular-app",
+  "name": "@MaximeK/nebular-app",
   "version": "0.0.0",
   "main": "main.js",
+  "repository": "https://github.com/MaxeeZ/FutureTracking",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "ng": "ng",
     "start": "npm-run-all -p ng:serve electron:serve",
