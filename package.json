@@ -1,13 +1,24 @@
 {
   "name": "nebular-app",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "npm-run-all -p ng:serve electron:serve",
+    "ng:serve": "ng serve",
+    "build": "npm run electron:serve-tsc && ng build",
+    "build:dev": "npm run build -- -c dev",
+    "build:prod": "npm run build -- -c production",
+    "electron:serve-tsc": "tsc -p tsconfig-serve.json",
+    "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:serve-tsc && electron . --serve",
+    "electron:local": "npm run build:prod && electron .",
+    "electron:linux": "npm run build:prod && electron-builder build --linux",
+    "electron:windows": "npm run build:prod && electron-builder build --windows",
+    "electron:mac": "npm run build:prod && electron-builder build --mac",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
+    "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -29,8 +40,10 @@
     "eva-icons": "^1.1.2",
     "file-saver": "^2.0.2",
     "ng2-pdf-viewer": "^6.0.2",
+    "npm-run-all": "^4.1.5",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "wait-on": "^3.3.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -44,6 +57,8 @@
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "electron": "^7.1.7",
+    "electron-builder": "^21.2.0",
+    "electron-reload": "^1.5.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
