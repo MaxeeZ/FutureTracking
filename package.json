@@ -1,16 +1,21 @@
 {
-  "name": "@MaximeK/nebular-app",
+  "name": "@MaxeeZ/nebular-app",
   "version": "0.0.0",
   "main": "main.js",
   "repository": "https://github.com/MaxeeZ/FutureTracking",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "npm-run-all -p ng:serve electron:serve",
+    "start": "npm run postinstall:electron && npm-run-all -p ng:serve electron:serve",
     "ng:serve": "ng serve",
     "build": "npm run electron:serve-tsc && ng build",
     "build:dev": "npm run build -- -c dev",
     "build:prod": "npm run build -- -c production",
+    "postinstall": "npm run postinstall:electron && electron-builder install-app-deps",
+    "postinstall:web": "node postinstall-web",
+    "postinstall:electron": "node postinstall",
     "electron:serve-tsc": "tsc -p tsconfig-serve.json",
     "electron:serve": "wait-on http-get://localhost:4200/ && npm run electron:serve-tsc && electron . --serve",
     "electron:local": "npm run build:prod && electron .",
@@ -22,7 +27,7 @@
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "lint": "ng lint"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/cdk": "^8.0.0",
@@ -43,6 +48,7 @@
     "file-saver": "^2.0.2",
     "ng2-pdf-viewer": "^6.0.2",
     "npm-run-all": "^4.1.5",
+    "postinstall": "^0.7.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "wait-on": "^3.3.0",
