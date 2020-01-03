@@ -1,12 +1,12 @@
-@import 'themes';
+@import "themes";
 
-@import '~@nebular/theme/styles/globals';
+@import "~@nebular/theme/styles/globals";
 
-@import '~@nebular/theme/styles/themes/default';
+@import "~@nebular/theme/styles/themes/default";
 
 @include nb-install() {
   @include nb-theme-global();
-};
+}
 /* You can add global styles to this file, and also import other style files */
 .scrollable {
   padding: 0 0 0 0 !important;
@@ -36,7 +36,8 @@ app-error-found {
   display: block;
 }
 
-nb-select.size-medium .select-button, .nb-theme-default .size-medium nb-option {
+nb-select.size-medium .select-button,
+.nb-theme-default .size-medium nb-option {
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1rem;
@@ -73,4 +74,50 @@ nb-window nb-card {
 .pdf-container {
   display: flex !important;
   flex-direction: column !important;
+}
+
+nb-card {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 800px) {
+  .compacted {
+    display: none !important;
+  }
+
+  .expanded {
+    width: 16rem !important;
+    position: fixed !important;
+  }
+
+  .main-container-fixed {
+    position: initial !important;
+  }
+
+  #emailInfo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  app-footer span {
+    display: none !important;
+  }
+
+  app-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end !important;
+  }
+
+  // .body {
+  //   flex-direction: column !important;
+  //   text-align: -webkit-center !important;
+  // }
+}
+
+@media (max-width: 515px) {
+  #rightHeaderMenu {
+    display: none !important;
+  }
 }
