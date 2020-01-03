@@ -16,7 +16,7 @@ function createWindow() {
         height: size.height,
         webPreferences: {
             nodeIntegration: true,
-            allowRunningInsecureContent: (serve) ? true : false,
+            allowRunningInsecureContent: true,
             webSecurity: false
         },
     });
