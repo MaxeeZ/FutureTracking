@@ -28,12 +28,12 @@ export class RecipeDetailsComponent implements OnInit {
   }
 
   exportPDF() {
-    this.pdfSrc = 'http://192.168.56.101:8181/getRecipes/' + this.recipe.id;
+    this.pdfSrc = 'http://178.170.101.32:8181/getRecipes/' + this.recipe.id;
     this.windowService.open(this.contentTemplate, { title: this.recipe.name });
   }
 
   downloadPDF() {
-    const pdfUrl = 'http://192.168.56.101:8181/getRecipes/' + this.recipe.id;
+    const pdfUrl = 'http://178.170.101.32:8181/getRecipes/' + this.recipe.id;
     const pdfName = this.recipe.name;
     FileSaver.saveAs(pdfUrl, pdfName);
   }
