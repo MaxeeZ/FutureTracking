@@ -28,7 +28,7 @@ jobs:
             
       - run: 
           name: Install @angular/cli
-          command: sudo npm install -g @angular/cli
+          command: sudo npm install -g --silent @angular/cli
           
       - run: 
           name: Install dependencies
