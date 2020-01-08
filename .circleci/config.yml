@@ -25,10 +25,13 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
+       
+      - run: 
+          name: Initialize NG_CLI_ANALYTICS variable
+          command: sudo export NG_CLI_ANALYTICS=ci
             
       - run: 
           name: Install @angular/cli
-          command: sudo export NG_CLI_ANALYTICS=ci
           command: sudo npm install -g @angular/cli
           
       - run: 
