@@ -42,7 +42,7 @@ jobs:
       
       - run: 
           name: Build Angular App
-          command: npm run build:prod
+          command: sudo npm run build:prod
           
 workflows:
   version: 2
