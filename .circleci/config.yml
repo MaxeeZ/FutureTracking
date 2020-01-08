@@ -31,12 +31,8 @@ jobs:
           command: sudo npm install -g @angular/cli
           
       - run: 
-          name: Install missed dependances
-          command: sudo npm install rxjs@6.5.1
-          
-      - run: 
           name: Install dependencies
-          command: npm install
+          command: sudo npm install
 
       - save_cache:
           paths:
