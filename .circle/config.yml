@@ -4,12 +4,6 @@
 #
 version: 2
 jobs:
-
-  deploy:
-    filters:
-        branches:
-            only:
-                - CircleCI
   build:
     docker:
       # specify the version you desire here
@@ -45,3 +39,12 @@ jobs:
       - run: 
           name: Build Angular App
           command: ng build --prod
+          
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: CircleCI
