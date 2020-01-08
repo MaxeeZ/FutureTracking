@@ -4,6 +4,12 @@
 #
 version: 2
 jobs:
+
+  deploy:
+    filters:
+        branches:
+            only:
+                - CircleCI
   build:
     docker:
       # specify the version you desire here
