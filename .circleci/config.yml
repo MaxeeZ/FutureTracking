@@ -26,9 +26,13 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
             
+       - run:
+          name: 'Set env'
+          command: echo 'export NG_CLI_ANALYTICS=ci' >> $BASH_ENV
+            
       - run: 
           name: Install @angular/cli
-          command: sudo npm install -g @angular/cli -y
+          command: sudo npm install -g @angular/cli
           
       - run: 
           name: Install dependencies
