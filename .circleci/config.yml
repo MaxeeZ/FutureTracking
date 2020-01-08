@@ -31,6 +31,10 @@ jobs:
           command: sudo npm install -g @angular/cli
           
       - run: 
+          name: Install electron
+          command: sudo npm install -g electron
+          
+      - run: 
           name: Install dependencies
           command: npm install
 
