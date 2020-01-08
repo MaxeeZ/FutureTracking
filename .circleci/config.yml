@@ -28,7 +28,7 @@ jobs:
        
       - run: 
           name: Initialize NG_CLI_ANALYTICS variable
-          command: sudo export NG_CLI_ANALYTICS=ci
+          command: bash -c "export NG_CLI_ANALYTICS=ci"
             
       - run: 
           name: Install @angular/cli
