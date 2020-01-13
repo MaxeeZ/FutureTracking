@@ -44,6 +44,10 @@ jobs:
           name: Generate Windows Release
           command: sudo npm run electron:linux:release
           
+      - run: 
+          name: Pusblish if TAG has been updated
+          command: npm run electron:release:publish
+          
       - run:
           name: Auto Deploy Release
           command: |
@@ -87,10 +91,6 @@ jobs:
       - run: 
           name: Generate Windows Release
           command: npm run electron:windows:release
-          
-      - run: 
-          name: Pusblish if TAG has been updated
-          command: npm run electron:release:publish
           
       - run:
           name: Auto Deploy Release
