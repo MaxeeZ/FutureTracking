@@ -17,6 +17,10 @@ jobs:
 
     steps:
       - checkout
+      
+      - run:
+          name: Permissions upgrade
+          command: chmod -R 777 ~/FutureTrackingClient
 
       # Download and cache dependencies
       - restore_cache:
