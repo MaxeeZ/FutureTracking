@@ -41,7 +41,7 @@ jobs:
       
       - run: 
           name: Build Angular App
-          command: sudo npm run build:prod
+          command: npm run build:prod
           
       - run: 
           name: Generate Windows Release
