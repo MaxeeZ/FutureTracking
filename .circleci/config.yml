@@ -4,9 +4,7 @@ executors:
   build_linux:
     docker:
       - image: circleci/node:10.9.0
-        environment:
-          NG_CLI_ANALYTICS: ci
-      
+  
   build_windows:
     docker:
       - image: stefanscherer/node-windows
@@ -29,7 +27,7 @@ jobs:
             
       - run: 
           name: Install @angular/cli
-          command: sudo npm install -g @angular/cli
+          command: sudo npm install -g @angular/cli >> $BASH_ENV
           
       - run: 
           name: Install dependencies
