@@ -24,14 +24,10 @@ jobs:
             - sudo v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - sudo v1-dependencies-
-            
-      - run: 
-          name: Install @angular/cli
-          command: sudo npm install -g @angular/cli >> $BASH_ENV
           
       - run: 
           name: Install dependencies
-          command: sudo npm install
+          command: sudo npm install >> $BASH_ENV
 
       - save_cache:
           paths:
