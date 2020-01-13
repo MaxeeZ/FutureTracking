@@ -11,8 +11,7 @@ executors:
 
 jobs:
   buildLinux:
-    executor:
-      name: build_linux
+    executor: build_linux
     
     working_directory: ~/FutureTrackingClient
 
@@ -56,8 +55,7 @@ jobs:
             GITHUB_TOKEN: 91e065cd6977d363d77594c74f9f771c3f0d0753
 
   buildWindows:
-    executor:
-      name: build_windows
+    executor: build_windows
     
     working_directory: ~/FutureTrackingClient
 
