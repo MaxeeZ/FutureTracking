@@ -4,8 +4,8 @@ executors:
   build_linux:
     docker:
       - image: circleci/node:10.9.0
-      environement:
-        NG_CLI_ANALYTICS: ci
+      - environement:
+          NG_CLI_ANALYTICS: ci
       
   build_windows:
     docker:
