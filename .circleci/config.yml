@@ -4,6 +4,8 @@ executors:
   build_linux:
     docker:
       - image: circleci/node:10.9.0
+        environment:
+          GH_TOKEN: 91e065cd6977d363d77594c74f9f771c3f0d0753
   
   build_windows:
     docker:
@@ -85,6 +87,10 @@ jobs:
       - run: 
           name: Generate Windows Release
           command: npm run electron:windows:release
+          
+      - run: 
+          name: Pusblish if TAG has been updated
+          command: npm run electron:release:publish
           
       - run:
           name: Auto Deploy Release
