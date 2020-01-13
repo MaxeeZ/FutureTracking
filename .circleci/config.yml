@@ -71,7 +71,7 @@ jobs:
             
       - run: 
           name: Install @angular/cli
-          command: npm install -g @angular/cli > /dev/null
+          command: yes | npm install -g @angular/cli
           
       - run: 
           name: Install dependencies
