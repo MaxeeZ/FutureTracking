@@ -25,7 +25,7 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-                        
+            
       - run: 
           name: Install @angular/cli
           command: sudo npm install -g @angular/cli > /dev/null
@@ -38,11 +38,22 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
       
       - run: 
           name: Build Angular App
           command: sudo npm run build:prod
+          
+      - run: 
+          name: Generate Windows Release
+          command: npm run electron:windows
+          
+      - run:
+          name: Auto Deploy Release
+          command: |
+            echo Pusblish Release
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist/win-unpacked/*.exe
+          environment:
+            GITHUB_TOKEN: 91e065cd6977d363d77594c74f9f771c3f0d0753
           
 workflows:
   version: 2
