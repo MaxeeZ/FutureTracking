@@ -46,7 +46,7 @@ jobs:
           
       - run: 
           name: Pusblish if TAG has been updated
-          command: npm run electron:release:publish
+          command: sudo npm run electron:release:publish
           
       - run:
           name: Auto Deploy Release
