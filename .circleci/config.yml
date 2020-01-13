@@ -28,7 +28,7 @@ jobs:
       - run: 
           name: Install @angular/cli
           environment:
-            NG_CLI_ANALYTICS: "ci"
+            NG_CLI_ANALYTICS: ci
           command: sudo npm install -g @angular/cli
           
       - run: 
