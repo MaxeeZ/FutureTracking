@@ -4,6 +4,7 @@ executors:
   build_linux:
     docker:
       - image: circleci/node:10.9.0
+    working_directory: ~/FutureTrackingClient
       
   build_windows:
     docker:
@@ -12,15 +13,9 @@ executors:
 jobs:
   buildLinux:
     executor: build_linux
-    
-    working_directory: ~/FutureTrackingClient
 
     steps:
       - checkout
-      
-      - run:
-          name: Permissions upgrade
-          command: chmod -R 777 ~/FutureTrackingClient
 
       # Download and cache dependencies
       - restore_cache:
