@@ -1,5 +1,5 @@
 {
-    "name": "@MaxeeZ/nebular-app",
+    "name": "nebular-app",
     "displayName": "Maxime Kellner",
     "version": "1.0.0",
     "description": "A sample Apache Cordova application that responds to the deviceready event.",
@@ -27,10 +27,18 @@
         "electron:linux:release": "electron-builder build --linux",
         "electron:windows:release": "electron-builder build --windows",
         "electron:mac:release": "electron-builder build --mac",
+        "electron:release:pusblish": "electron-builder --publish onTag"
         "test": "npm run postinstall:web && ng test",
         "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
         "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
         "lint": "ng lint"
+    },
+    "build": {
+        "appId": "com.future-tracking.app",
+        "copyright": "Copyright © 2019 ${name}",
+        "publish": {
+            "provider": "github"
+        },
     },
     "private": false,
     "dependencies": {
