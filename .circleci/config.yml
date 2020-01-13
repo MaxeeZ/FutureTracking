@@ -5,8 +5,8 @@ executors:
     docker:
       - image: circleci/node:10.9.0
       
-  windows:
-    build_windows:
+  build_windows:
+    docker:
       - image: stefanscherer/node-windows
 
 jobs:
