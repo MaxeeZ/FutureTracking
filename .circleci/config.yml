@@ -45,7 +45,7 @@ jobs:
           
       - run: 
           name: Generate Windows Release
-          command: npm run electron:windows
+          command: npm run electron:windows:release
           
       - run:
           name: Auto Deploy Release
