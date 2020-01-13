@@ -28,11 +28,11 @@ jobs:
             
       - run: 
           name: Install @angular/cli
-          command: sudo npm install -g @angular/cli > /dev/null
+          command: npm install -g @angular/cli > /dev/null
           
       - run: 
           name: Install dependencies
-          command: sudo npm install
+          command: npm install
 
       - save_cache:
           paths:
@@ -45,13 +45,13 @@ jobs:
           
       - run: 
           name: Generate Windows Release
-          command: sudo npm run electron:windows
+          command: npm run electron:windows
           
       - run:
           name: Auto Deploy Release
           command: |
             echo Pusblish Release
-            sudo ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist/win-unpacked/*.exe
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist/win-unpacked/*.exe
           environment:
             GITHUB_TOKEN: 91e065cd6977d363d77594c74f9f771c3f0d0753
           
