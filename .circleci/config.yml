@@ -4,7 +4,6 @@ executors:
   build_linux:
     docker:
       - image: circleci/node:10.9.0
-    working_directory: ~/FutureTrackingClient
       
   build_windows:
     docker:
@@ -13,6 +12,8 @@ executors:
 jobs:
   buildLinux:
     executor: build_linux
+    
+    working_directory: ~/FutureTrackingClient
 
     steps:
       - checkout
@@ -20,9 +21,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - sudo v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+            - sudo v1-dependencies-
             
       - run: 
           name: Install @angular/cli
